@@ -1,9 +1,9 @@
 idea:
     build: .
     labels:
-        org.kurron.description: "JetBrains IntelliJ IDEA Java IDE"
-        org.kurron.version: "15.0.1"
-    container_name: "intellij"
+        org.kurron.description: "JetBrains PyCharm Python IDE"
+        org.kurron.version: "5.0.1"
+    container_name: "pycharm"
     net: "host"
     volumes:
         - /tmp/.X11-unix:/tmp/.X11-unix
