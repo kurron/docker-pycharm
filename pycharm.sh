@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CMD="docker run \
-       --name pychamr \
+       --name pycharm \
        --net "host" \
        --env DISPLAY=unix$DISPLAY \
        --user 1000:1000 \
