@@ -6,7 +6,7 @@ LABEL org.kurron.ide.name="PyCharm" org.kurron.ide.version=5.0.1
 
 # Install Python tooling and Ansible 
 RUN apt-get update -y && \
-    apt-get install -y build-essential linux-headers-$(uname -r) python-setuptools python-dev && \
+    apt-get install -y build-essential python-setuptools python-dev && \
     easy_install pip && \
     pip install ansible && \
     apt-get clean && \
