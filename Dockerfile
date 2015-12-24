@@ -33,11 +33,14 @@ LABEL org.kurron.java.vendor="Oracle"  org.kurron.java.version="1.8.0_65"
 # replicate kurron/docker-jetbrains-base
 # Install the libraries needed to run a JVM in GUI mode
 RUN apt-get update && \
-    apt-get install -y libgtk2.0-0 libcanberra-gtk-module libxext-dev libxrender-dev libxtst-dev git subversion mercurial && \
+    apt-get install -y libgtk2.0-0 libcanberra-gtk-module libxext-dev libxrender-dev libxtst-dev python-dev git subversion mercurial && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
+
+# Install Python packages
+RUN pip install --upgrade pip pycrypto
 
 # Create a user and group that matches what is in most Vagrant boxes
 RUN groupadd --gid 1000 developer && \
