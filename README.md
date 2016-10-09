@@ -3,11 +3,13 @@ This project is a simple Docker image that runs [JetBrains PyCharm IDE](http://w
 
 #Prerequisites
 * a working [Docker](http://docker.io) engine
+   
    ```
    docker --version
    Docker version 1.12.1, build 23cf638
    ```
 * a working [Docker Compose](http://docker.io) installation
+   
    ``` 
    $ docker-compose --version
    docker-compose version 1.8.0, build f3628c7
