@@ -1,10 +1,13 @@
-pycharm:
+version: '2'
+
+services:
+
+  pycharm:
     build: .
-    container_name: "pycharm"
-    net: "host"
+    image: ${DOCKER_HUB_USER}pycharm-community:2016.2.3
     volumes:
         - /tmp/.X11-unix:/tmp/.X11-unix
-        - /home/vagrant:/home/developer
+        - ${HOME}:/home/developer
     environment:
         DISPLAY: unix:0.0
     user: 1000:1000
