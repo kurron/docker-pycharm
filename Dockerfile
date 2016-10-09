@@ -55,7 +55,7 @@ ENV HOME /home/developer
 # the user of this image is expected to mount his actual home directory to this one
 VOLUME ["/home/developer"]
 
-ADD https://download.jetbrains.com/python/pycharm-professional-5.0.3.tar.gz /tmp/ide.tar.gz
+ADD https://download.jetbrains.com/python/pycharm-community-2016.2.3.tar.gz /tmp/ide.tar.gz
 
 RUN mkdir -p /opt/ide && \
     tar zxvf /tmp/ide.tar.gz --strip-components=1 -C /opt/ide && \
