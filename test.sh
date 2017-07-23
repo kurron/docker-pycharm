@@ -2,7 +2,7 @@
 
 # Launches PyCharm inside a Docker container
 
-IMAGE=${1:-kurron/docker-pycharm:latest}
+IMAGE=${1:-kurron/pycharm-local:latest}
 
 DOCKER_GROUP_ID=$(cut -d: -f3 < <(getent group docker))
 USER_ID=$(id -u $(whoami))
